@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'RobotoMono-Regular';
+    src: url('fonts/RobotoMono-Regular.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+:root {
+    --font-family-primary: 'OpenSans-Regular', sans-serif;
+    --font-family-secondary: 'RobotoMono-Regular', monospace;
+    --font-family-code: 'RobotoMono-Regular', monospace;
+
+    --color: black;
+    --background-color: white;
+    --secondary-color: #8b56db;
+
+    --s-color: white;
+    --s-background-color: black;
+    /* s for static */
+    
+
+    --font-size: 1rem;
+    --line-height: 150%;
+}
+
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--background-color); /* Background color of the track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary-color); /* Color of the scroll thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scroll thumb on hover */
+  }
+
+
+  ::selection {
+    background-color: var(--secondary-color);
+    color: var(--background-color)
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    font-family: var(--font-family-primary);
+}
+
+a, a:visited, a:active {
+  color: var(--color);
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+}
+
+
+h1 {
+  font-family: var(--font-family-code);
+  font-weight: normal;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    place-content: center;
+    justify-content: center;
+    height: 100vh;
+
+
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+
+    position: relative;
+    bottom: 1px;
+    z-index: 2;
+
+}
+
+.land {
+    display: grid;
+    place-content: center;
+    gap: 5px;
+
+}
+
+.border-box {
+  display: grid;
+  padding: 50px;
+  gap: 5px;
+
+}
+
+
+#desc {
+  color: var(--secondary-color)
+}
