@@ -73,6 +73,7 @@
 
   .desktop-hidden {
     display: none;
+    color: red;
   }
   
   .gradient {
@@ -182,6 +183,7 @@
     }
     .desktop-hidden {
         display: block;
+        color: red;
       }
   
     #pages {
