@@ -15,8 +15,8 @@
   --font-family-secondary: "RobotoMono-Regular", monospace;
   --font-family-code: "RobotoMono-Regular", monospace;
 
-  --color: #2e5266;
-  --background-color: white;
+  --color: white;
+  --background-color: black;
   --secondary-color: #8b56db;
 
   --s-color: white;
@@ -53,6 +53,7 @@ body {
   font-family: var(--font-family-primary);
   background-size: 200%;
   color: white;
+  background-color: var(--background-color);
 }
 
 a {
@@ -75,19 +76,6 @@ h1 {
   color: red;
 }
 
-.gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
-}
-
 .wrapper {
   display: grid;
   place-content: center;
@@ -99,11 +87,6 @@ h1 {
   margin: auto;
   margin-top: 100px;
   height: auto;
-  padding: 15px;
-}
-
-.first {
-  margin-left: 50px;
 }
 
 .head {
@@ -140,6 +123,7 @@ a {
   place-content: center;
   color: white;
   border-radius: 20px;
+  gap: 15px;
 }
 
 .article-link {
