@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5YNLGYNZS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H5YNLGYNZS');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><a class="heading-1 article-anchor" href="#building-a-trading-bot">Building a Trading Bot</a></title>
+    <link rel="stylesheet" href="articles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <dialog id="stats">
+            <span>stats -- press esc to close</span>
+            <div class="stats">
+                <span>word count: <span id="words">10</span></span>
+                <span>heading count: <span id="headings">10</span></span>
+                <span>date created: <span id="created">26/7/2023</span></span>
+                <span>viewed: <span id="viewed">10</span></span>
+                <span>session time: <span id="time">10</span></span>
+                <span>page load time: <span id="avg">10</span></span>
+            </div>
+        </dialog>
+        <dialog id="all_links"></dialog>
+        <dialog id="all_images"></dialog>
+
+        <div class="center">
+            <button id="toggle">in this article</button>
+            <button id="links-bt">links</button>
+        </div>
+        <div id="sidebar">
+            <span id="in-this">In this Article [<a class="heading-1 article-anchor" href="#building-a-trading-bot">Building a Trading Bot</a>]</span>
+            <div id="anchors">
+                
+                <a class="heading-2 article-anchor" href="#what-i-start-with">What I start With</a>
+                
+            </div>
+
+        </div>
+        <div id="links"><span>brian comfort</span> <br> <a href="/index.html">home</a> <a id="theme">dark theme</a>
+            <br>
+            <a onclick="stats.showModal()">stats</a> <a onclick="all_links.showModal()">links</a> <a
+                onclick="all_images.showModal()">images</a>
+        </div>
+        <article>
+            <div class="markdown">
+
+                <h1 id="building-a-trading-bot">Building a Trading Bot</h1>
+<p><span id="tags">template, testing</span></p>
+<p>```Mermaid
+        graph TD;
+        user --&gt; aws-lambda;
+        aws-lambda --&gt; main.py;
+        main.py --&gt; data-API;
+        main.py --&gt; Model;
+        Yahoo-Finance --&gt; Selenium-Scrapper;
+        Selenium-Scrapper --&gt; data-API;
+        data-API --&gt; Machine-Learning-Algo
+        Model --&gt; Machine-Learning-Algo;
+        Machine-Learning-Algo --&gt; Output-(Y/N)</p>
+<p>```</p>
+<h2 id="what-i-start-with">What I start With</h2>
+<p>The initial attempt at making an algo to be able to trade stock based off of incomplete data was sort of a success. I opted to use multiple forms of machine learning methods to come up with an outcome of Y/N.</p>
+<p>Some of those methods are listed here:</p>
+<ul>
+<li>Chat-GPT 3.5 Turbo</li>
+<li>Pure Linear Regression</li>
+<li>Random Forest Regression</li>
+</ul>
+<p>From using those, I found that using Random Forest Regression got a somewhat accurate prediction of a closing and opening price of a stock the day after. But the question if it's a viable way to invest money is an absolute no.</p>
+<p>Which is why I'm here, planning out a new way to tackle this project.</p>
+            </div>
+
+        </article>
+    </div>
+    <script src="articles.js"></script>
+</body>
+
+</html>
