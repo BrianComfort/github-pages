@@ -1,6 +1,5 @@
 {
     let times = localStorage.getItem('viewed')
-    console.log(typeof (times))
     times = parseInt(times) + 1;
 
     localStorage.setItem('viewed', times)
@@ -79,7 +78,6 @@
 
         if (current_theme == 0) {
             // change to dark theme
-            console.log('dark')
             root.style.setProperty('--background-color', 'black');
             root.style.setProperty('--color', 'white');
             theme.innerText = 'light mode';

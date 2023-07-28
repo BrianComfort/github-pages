@@ -72,7 +72,7 @@
 
                 <h1 id="building-a-trading-bot">Building a Trading Bot</h1>
                 <p><span id="tags">template, testing</span></p>
-                <p>```Mermaid
+                <pre class="mermaid">
                     graph TD;
                     user --&gt; aws-lambda;
                     aws-lambda --&gt; main.py;
@@ -82,7 +82,7 @@
                     Selenium-Scrapper --&gt; data-API;
                     data-API --&gt; Machine-Learning-Algo
                     Model --&gt; Machine-Learning-Algo;
-                    Machine-Learning-Algo --&gt; Output-(Y/N)</p>
+                    Machine-Learning-Algo --&gt; Output-(Y/N)</pre>
                 <p>```</p>
                 <h2 id="what-i-start-with">What I start With</h2>
                 <p>The initial attempt at making an algo to be able to trade stock based off of incomplete data was sort
@@ -125,7 +125,7 @@
                     its performance. Since I have already attempted to make a machine learning algo (<a
                         href="#what-i-start-with">what I start with</a>) and have tested and tried some things, I found
                     that random forest regression from sklkit learn is debatably the best I've used. I found another
-                    soruce today to back this claim up (<a
+                    source today to back this claim up (<a
                         href="https://dataconomy.com/2023/01/11/stock-prediction-machine-learning/">Stock Prediction
                         Machine Learning</a>). For now, I'll be using this function to predict but later down the road,
                     I'll be using a lot of methods.</p>
