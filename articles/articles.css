@@ -313,3 +313,9 @@ h1 {
 .highlighted {
   font-weight: bold;
 }
+
+.mermaid {
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
