@@ -17,7 +17,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.png">
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+
 </head>
 
 <body>
@@ -27,7 +27,7 @@
             <div class="stats">
                 <span>word count: <span id="words">10</span></span>
                 <span>heading count: <span id="headings">10</span></span>
-                <span>date created: <span id="created">26/7/2023</span></span>
+                <span>date created: <span id="created">28/7/2023</span></span>
                 <span>viewed: <span id="viewed">10</span></span>
                 <span>session time: <span id="time">10</span></span>
                 <span>page load time: <span id="avg">10</span></span>
@@ -47,6 +47,18 @@
 
                 <a class="heading-2 article-anchor" href="#what-i-start-with">What I start With</a>
 
+                <a class="heading-2 article-anchor" href="#research">Research</a>
+
+                <a class="heading-3 article-anchor" href="#preface">A Preface</a>
+
+                <a class="heading-3 article-anchor" href="#data">Data</a>
+
+                <a class="heading-3 article-anchor" href="#model">Model</a>
+
+                <a class="heading-3 article-anchor" href="#testing">Testing/Evaluation</a>
+
+                <a class="heading-3 article-anchor" href="#validation">Validation</a>
+
             </div>
 
         </div>
@@ -60,21 +72,18 @@
 
                 <h1 id="building-a-trading-bot">Building a Trading Bot</h1>
                 <p><span id="tags">template, testing</span></p>
-                <pre class="mermaid">
-                graph TD;
-                user --&gt; aws-lambda;
-                aws-lambda --&gt; main.py;
-                main.py --&gt; data-API;
-                main.py --&gt; Model;
-                Yahoo-Finance --&gt; Selenium-Scrapper;
-                Selenium-Scrapper --&gt; data-API;
-                data-API --&gt; Machine-Learning-Algo
-                Model --&gt; Machine-Learning-Algo;
-                Machine-Learning-Algo --&gt; Output-(Y/N)
-            </pre>
-
-
-
+                <p>```Mermaid
+                    graph TD;
+                    user --&gt; aws-lambda;
+                    aws-lambda --&gt; main.py;
+                    main.py --&gt; data-API;
+                    main.py --&gt; Model;
+                    Yahoo-Finance --&gt; Selenium-Scrapper;
+                    Selenium-Scrapper --&gt; data-API;
+                    data-API --&gt; Machine-Learning-Algo
+                    Model --&gt; Machine-Learning-Algo;
+                    Machine-Learning-Algo --&gt; Output-(Y/N)</p>
+                <p>```</p>
                 <h2 id="what-i-start-with">What I start With</h2>
                 <p>The initial attempt at making an algo to be able to trade stock based off of incomplete data was sort
                     of a success. I opted to use multiple forms of machine learning methods to come up with an outcome
@@ -89,14 +98,50 @@
                     closing and opening price of a stock the day after. But the question if it's a viable way to invest
                     money is an absolute no.</p>
                 <p>Which is why I'm here, planning out a new way to tackle this project.</p>
+                <h2 id="research">Research</h2>
+                <h3 id="preface">A Preface</h3>
+                <p>Machine Learning is difficult, but not impossible. Even more, a model that can predict stock is
+                    difficult, but not impossible. The objective of this machine learning project is not to create a
+                    model that can predict every single price, rather to create a model that can predict correctly more
+                    than incorrectly, which is where profit lies.</p>
+                <p>Where to start this journey is with a chat-gpt question on the most basic principals of machine
+                    learning. It's answer:</p>
+                <ul>
+                    <li>Data</li>
+                    <li>Model</li>
+                    <li>Training</li>
+                    <li>Testing/Evaluation</li>
+                    <li>Validation</li>
+                </ul>
+                <p>The structure of these research notes will follow in this order.</p>
+                <h3 id="data">Data</h3>
+                <p>Data collection for stock prices is actually pretty straight forward since they're many services that
+                    are readily available to the average developer such as the Yahoo Finance API or the Apache Finance
+                    API. Both options are good and free, but do not have full coverage of every day of stock prices (But
+                    it's pretty close). In development, I'll use these apis to create a stock_data.csv file that will be
+                    the training and testing data.</p>
+                <h3 id="model">Model</h3>
+                <p>The model is debatably the biggest part of this project as it's going to be the deciding factor on
+                    its performance. Since I have already attempted to make a machine learning algo (<a
+                        href="#what-i-start-with">what I start with</a>) and have tested and tried some things, I found
+                    that random forest regression from sklkit learn is debatably the best I've used. I found another
+                    soruce today to back this claim up (<a
+                        href="https://dataconomy.com/2023/01/11/stock-prediction-machine-learning/">Stock Prediction
+                        Machine Learning</a>). For now, I'll be using this function to predict but later down the road,
+                    I'll be using a lot of methods.</p>
+                <h3 id="testing">Testing/Evaluation</h3>
+                <p>The structure of this project revolves around a final outcome of buy or sell, a boolean value. But
+                    everything before that is going to provide a percentage of the likelihood of a guess. Evaluating
+                    stock's is easy as data is continually being poured into it so this step is more about structure the
+                    physical code rather than finding testing data.</p>
+                <h3 id="validation">Validation</h3>
+                <p>As with <a href="#testing">Testing/Evaluation</a>, validating the effectiveness of the model is not
+                    difficult at all as data is continually being poured into the model daily.</p>
             </div>
 
         </article>
     </div>
     <script src="articles.js"></script>
-    <script type="module" defer>
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    </script>
 </body>
 
 </html>
