@@ -309,11 +309,6 @@ h1 {
   gap: 10px;
 }
 
-/* Add this CSS to highlight the heading in the contents box */
-.highlighted {
-  font-weight: bold;
-}
-
 .mermaid {
   display: flex;
   place-content: center;

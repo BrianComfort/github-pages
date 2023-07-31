@@ -1,0 +1,21 @@
+@media (min-width: 769px) {
+  #bottom-inspect {
+    position: fixed;
+    left: 15px;
+    bottom: 0;
+
+    display: flex;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1285px) {
+  #bottom-inspect {
+    display: none;
+  }
+}
+
+.highlighted {
+  background-color: var(--color) !important;
+  color: var(--background-color) !important;
+}
