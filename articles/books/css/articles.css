@@ -115,16 +115,6 @@ dialog {
   text-align: center;
 }
 
-article {
-  display: flex;
-}
-
-iframe {
-  width: 100%;
-  display: none;
-  height: 80vh;
-}
-
 .wrapper {
   display: grid;
 

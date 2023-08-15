@@ -52,7 +52,7 @@ body {
   font-family: Arial, sans-serif;
   font-family: var(--font-family-primary);
   background-size: 200%;
-  color: white;
+  color: var(--color);
   background-color: var(--background-color);
 }
 
@@ -121,7 +121,7 @@ a {
   height: 60px;
   display: grid;
   place-content: center;
-  color: white;
+  color: var(--background-color);
   border-radius: 20px;
   gap: 15px;
 }
@@ -144,7 +144,7 @@ a {
   height: 55px;
   transition-property: width, height;
   transition-duration: 250ms;
-  color: white;
+  color: var(--color);
 }
 
 .none-link {

@@ -190,19 +190,6 @@
 
 
 
-    const dual = document.querySelector('#dual');
-
-    dual.addEventListener('click', function () {
-        const dual_div = document.querySelector('iframe');
-        if (dual_div.style.display == 'none') {
-            dual_div.style.display = 'block';
-        }
-        else {
-            dual_div.style.display = 'none';
-        }
-
-
-    })
 }
 
 

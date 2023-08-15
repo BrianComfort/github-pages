@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5YNLGYNZS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H5YNLGYNZS');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><a class="heading-1 article-anchor" href="#">Dual Reader</a></title>
+    <link rel="stylesheet" href="css/articles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <dialog id="stats">
+            <span>stats -- press esc to close</span>
+            <div class="stats">
+                <span>word count: <span id="words">10</span></span>
+                <span>heading count: <span id="headings">10</span></span>
+                <span>date created: <span id="created">3/8/2023</span></span>
+                <span>viewed: <span id="viewed">10</span></span>
+                <span>session time: <span id="time">10</span></span>
+                <span>page load time: <span id="avg">10</span></span>
+            </div>
+        </dialog>
+        <dialog id="all_links"></dialog>
+        <dialog id="all_images"></dialog>
+
+        <div class="center">
+            <button id="toggle">in this article</button>
+            <button id="links-bt">links</button>
+        </div>
+        <div id="sidebar">
+            <span id="in-this">In this Article [<a class="heading-1 article-anchor" href="#">Dual Reader</a>]</span>
+            <div id="anchors">
+                
+            </div>
+
+        </div>
+        <div id="links"><span>brian comfort</span> <br> <a href="/index.html">home</a> <a id="theme">dark theme</a>
+            <br>
+            <a onclick="stats.showModal()">stats</a> <a onclick="all_links.showModal()">links</a> <a
+                onclick="all_images.showModal()">images</a>
+            <br>
+            <a id="dual">dual-reader</a>
+        </div>
+        <article>
+            <div class="markdown">
+
+                <h1 id="">Dual Reader</h1>
+<p>This page is to show off the dual reader capablity in some of these pages. I want this feature beacause im lazy to keep cliking between tabs.</p>
+            </div>
+            <iframe src="books/the_great_gatsby.html"></iframe>
+
+        </article>
+    </div>
+    <script src="js/articles.js"></script>
+    <script type="module" defer>
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    </script>
+</body>
+
+</html>
