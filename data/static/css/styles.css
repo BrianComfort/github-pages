@@ -1,0 +1,54 @@
+:root {
+    --background-color: white;
+    --color: black;
+
+}
+
+body {
+    overflow-y: hidden;
+}
+
+.wrapper {
+    display: flex;
+    
+}
+
+#page {
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--background-color); /* Background color of the track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--background-color); /* Color of the scroll thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scroll thumb on hover */
+  }
+  
+  ::selection {
+    background-color: var(--color);
+    color: var(--background-color);
+  }
+  
+
+#tools {
+    width: 25%;
+}
+
+#log {
+    width: 60%;
+    height: 80%;
+    overflow-y: scroll;
+}
